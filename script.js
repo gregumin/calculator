@@ -6,8 +6,8 @@ const divide = function(a,b) {return a/b};
 const numeric = "1234567890";
 const symbol = "+-*/";
 
-let firstNum;
-let secondNum;
+let firstNum = 0;
+let secondNum = 0;
 let currentOperator = "";
 //let plus = "+";
 //let minus = "-";
