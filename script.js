@@ -136,7 +136,7 @@ function opDivide() {equateOp(); currentOperator = "/"; display.textContent = "/
 btnDivide.addEventListener("click", opDivide);
 
 const btnEquals = document.getElementById("btnEquals");
-function opEquals() {if (firstNum != undefined && secondNum != undefined && curVal != NaN) {
+function opEquals() {if (firstNum != undefined && secondNum != undefined && curVal != NaN && currentOperator = "") {
     equate(); currentOperator = ""; display.textContent = curVal;
 }};
 btnEquals.addEventListener("click", opEquals);
