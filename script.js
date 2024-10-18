@@ -2,6 +2,7 @@ const add = function(a,b) {return a + b};
 const subtract = function(a,b) {return a-b};
 const multiply = function(a,b) {return a*b};
 const divide = function(a,b) {return a/b};
+const power = function (a,b) {return a**b};
 
 const numeric = "1234567890";
 const symbol = "+-*/";
@@ -27,6 +28,9 @@ switch(operator){
         break;
     case "/":
         return divide(first,second);
+        break;
+    case "**":
+        return power(first,second);
         break;
     default:
         return "unknown operation";
@@ -134,6 +138,10 @@ btnMultiply.addEventListener("click", opMultiply);
 const btnDivide = document.getElementById("btnDivide");
 function opDivide() {equateOp(); currentOperator = "/"; display.textContent = "/"; updateNum()};
 btnDivide.addEventListener("click", opDivide);
+
+const btnPower = document.getElementById("btnPower");
+function opPower() {equateOp(); currentOperator = "**"; display.textContent = "^"; updateNum()};
+btnPower.addEventListener("click", opPower);
 
 const btnEquals = document.getElementById("btnEquals");
 function opEquals() {if (firstNum != undefined && secondNum != undefined && curVal != NaN && currentOperator != "") {
