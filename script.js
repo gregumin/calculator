@@ -136,13 +136,13 @@ function opDivide() {equateOp(); currentOperator = "/"; display.textContent = "/
 btnDivide.addEventListener("click", opDivide);
 
 const btnEquals = document.getElementById("btnEquals");
-function opEquals() {if (firstNum != undefined || secondNum != undefined) {
+function opEquals() {if (firstNum != undefined && secondNum != undefined && curVal != NaN) {
     equate(); currentOperator = ""; display.textContent = curVal;
 }};
 btnEquals.addEventListener("click", opEquals);
 
 const btnClear = document.getElementById("btnClear");
-function opClear() {firstNum = 0; secondNum = 0; display.textContent = 0; currentOperator = ""}
+function opClear() {firstNum = 0; secondNum = 0; curVal = 0; curValArr = []; display.textContent = 0; currentOperator = ""}
 btnClear.addEventListener("click", opClear);
 
 const btnDel = document.getElementById("btnDel");
