@@ -60,7 +60,7 @@ function equateOp () {
         secondNum = curVal
         operate();
         curValArr = [operate()];
-        curVal = Number(curValArr.join(""));
+        curVal = Math.round((Number(curValArr.join("")))*10000)/10000;
     }
 }
 
@@ -69,7 +69,7 @@ function equate () {
         secondNum = curVal
         operate();
         curValArr = [operate()];
-        curVal = Number(curValArr.join(""));
+        curVal = Math.round((Number(curValArr.join("")))*10000)/10000;
     
 }
 
@@ -112,6 +112,10 @@ btn9.addEventListener("click", add9);
 const btn0 = document.getElementById("btn0");
 function add0() {curValArr.push(0); updateCurVal()};
 btn0.addEventListener("click", add0);
+
+const btnDecimal = document.getElementById("btnDecimal");
+function addDecimal() {if (curValArr.includes(".")) {} else {curValArr.push("."); updateCurVal()}};
+btnDecimal.addEventListener("click", addDecimal);
 
 const btnAdd = document.getElementById("btnAdd");
 function opAdd() {equateOp(); currentOperator = "+"; display.textContent = "+"; updateNum()};
