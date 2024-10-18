@@ -1,6 +1,6 @@
 const add = function(a,b) {return a + b};
 const subtract = function(a,b) {return a-b};
-const multiple = function(a,b) {return a*b};
+const multiply = function(a,b) {return a*b};
 const divide = function(a,b) {return a/b};
 
 const numeric = "1234567890";
