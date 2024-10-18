@@ -145,3 +145,6 @@ const btnClear = document.getElementById("btnClear");
 function opClear() {firstNum = 0; secondNum = 0; display.textContent = 0; currentOperator = ""}
 btnClear.addEventListener("click", opClear);
 
+const btnDel = document.getElementById("btnDel");
+function opDel() {curValArr.pop(); updateCurVal()};
+btnDel.addEventListener("click", opDel);
