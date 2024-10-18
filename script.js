@@ -49,10 +49,14 @@ function updateNum () {
 
 }
 
-//function that used when equal is pressed, adds current value to secondNum
+//function that used when equal is pressed, adds current value to secondNum (still problematic)
+//works when +==== but when i + again firstnum is secondnum instead of operator so mistake
 function updateNum2 () {
-    if (secondNum === undefined) {
-        secondNum = firstNum
+    if (curValArr.length == 0) {
+        //secondNum = firstNum;
+        curValArr.push(firstNum);
+        curVal = Number(curValArr.join(""));
+        secondNum = curVal;
     } else {
         secondNum = curVal;
     }
@@ -68,7 +72,7 @@ btnAdd.addEventListener("click", opAdd);
 //make btnadd clear current array and add it to firstNum
 
 const btnEquals = document.getElementById("btnEquals");
-function opEquals() {updateNum2(); operate(); display.textContent = operate(); firstNum = operate(); }
+function opEquals() {updateNum2(); operate(); display.textContent = operate(); firstNum = operate(); curVal = firstNum;}
 btnEquals.addEventListener("click", opEquals);
 
 const btnClear = document.getElementById("btnClear");
