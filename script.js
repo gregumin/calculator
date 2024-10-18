@@ -61,6 +61,7 @@ function equateOp () {
         operate();
         curValArr = [operate()];
         curVal = Math.round((Number(curValArr.join("")))*10000)/10000;
+        if (curVal === Infinity) {curVal = "ruh roh"; firstNum = undefined; secondNum = undefined};
     }
 }
 
@@ -70,6 +71,7 @@ function equate () {
         operate();
         curValArr = [operate()];
         curVal = Math.round((Number(curValArr.join("")))*10000)/10000;
+        if (curVal === Infinity) {curVal = "ruh roh"; firstNum = undefined; secondNum = undefined};
     
 }
 
